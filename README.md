@@ -142,9 +142,10 @@ temas/previews/<id>.jpg        ← prévia mostrada na loja (480×270)
     "destaque": "#FCEE0A",            // vira a cor de destaque do app enquanto o tema estiver em uso
     "linha": "#80FCEE0A", "linhaFim": "",     // bordas; com linhaFim vira degradê (brilho de vidro)
     "cartao": "#DB120A1E", "cartaoFim": "",   // cartões; com cartaoFim vira degradê do canto de cima ao de baixo
-    "lateral": "#EB080410", "lateralFim": ""  // barra lateral
+    "lateral": "#EB080410", "lateralFim": "",  // barra lateral
+    "janela": ""                      // só para fundo transparente: tinta por cima do vidro (vidro claro = branco translúcido, ex.: "#B8F2F5FB")
   },
-  "estilo": { "raioCartao": 6 },      // arredondamento dos cartões (8 a 32; 16 é o normal)
+  "estilo": { "raioCartao": 6, "fundo": "" },  // arredondamento dos cartões (8 a 32; 16 é o normal). fundo: "" normal | "acrilico" (janela transparente: desfoca o papel de parede do PC; Windows 11 22H2+) | "mica"
   "wallpaper": "wallpaper.jpg",       // .jpg, .png ou .webp na raiz do zip (opcional, até 14 MB)
   "wallpaperDesfoque": 12, "wallpaperEscurecer": 28
 }
