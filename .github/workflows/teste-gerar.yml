@@ -1,0 +1,21 @@
+name: Teste temporario do gerador
+
+on:
+  push:
+    branches: [acao-temas]
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gerar (sem gravar no repositorio)
+        run: python3 .github/scripts/temas.py --gerar --saida /tmp/catalogo-novo.json --sem-previas
+      - name: Comparar com o catalogo atual
+        run: |
+          echo "--- catalogo gerado:"
+          cat /tmp/catalogo-novo.json
+          echo "--- diferencas para o atual:"
+          diff <(python3 -c "import json;print(json.dumps(json.load(open('temas/catalogo.json',encoding='utf-8-sig')),sort_keys=True,indent=1,ensure_ascii=False))") <(python3 -c "import json;print(json.dumps(json.load(open('/tmp/catalogo-novo.json',encoding='utf-8')),sort_keys=True,indent=1,ensure_ascii=False))") && echo "IGUAIS"
