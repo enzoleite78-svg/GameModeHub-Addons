@@ -43,6 +43,7 @@ Só aparece para itens com `"oficial": true` **neste** catálogo. Como só você
   "autor": "Seu nome",
   "autorLink": "https://github.com/voce",
   "icone": "🧩",
+  "destino": "",                     // "" = aba na barra lateral; "aparencia" = a página aparece dentro da tela Aparência
   "descricao": "O que ele faz.",
 
   // se o addon traz o app de OUTRA pessoa (aparece no topo da aba):
@@ -75,6 +76,7 @@ Só aparece para itens com `"oficial": true` **neste** catálogo. Como só você
 | `link` | abre um site `https://` no navegador |
 | `temas` | mostra os temas do addon para escolher |
 | `editorCores` | o editor de tema personalizado |
+| `temasPacotes` | o gerenciador de temas baixados + botão **Loja de temas** (só addons ✔ Oficiais) |
 
 ### Ações dos botões
 
@@ -114,6 +116,50 @@ Alguns apps de código aberto têm um "motor" (um programa) além da tela. Para 
 **Publicar o pacote:** no GitHub, abra o repositório → **Releases → Draft a new release** → tag `emusync-1.0.10` → arraste o `.zip` → **Publish release**. (O arquivo é grande demais para a página de upload de arquivos comum, por isso vai em *Releases*.) Se o pacote mudar, o `sha256` do manifesto muda junto.
 
 **Licenças:** o pacote deve levar o texto da licença do programa e um `LEIA-ME.txt` com o link do código-fonte da versão exata (o EmuSync usa GPLv3: pode redistribuir sem alterar, mantendo licença e crédito).
+
+
+## Loja de temas (Temas+)
+
+O addon **Temas+** tem um botão **Loja de temas** que lê `temas/catalogo.json` deste repositório. Cada tema é um arquivo `.gmhtema` (um `.zip` renomeado) **sem código**: só cores, estilo e uma imagem.
+
+```
+temas/catalogo.json            ← a lista que o app lê
+temas/<id>.gmhtema             ← o tema (zip com tema.json + wallpaper)
+temas/previews/<id>.jpg        ← prévia mostrada na loja (480×270)
+```
+
+**tema.json** (na raiz do zip, junto da imagem):
+
+```jsonc
+{
+  "formato": 1,
+  "id": "seunome.meutema",            // minúsculas, números, ponto ou traço
+  "nome": "Meu tema", "versao": "1.0", "autor": "Seu nome", "icone": "🎨",
+  "descricao": "Uma frase sobre o tema.",
+  "cores": {                          // "#RRGGBB" ou "#AARRGGBB" (com transparência). Só fundo e texto são obrigatórios
+    "fundo": "#0B0612", "texto": "#F5F1DC",
+    "superficie": "#170B24", "superficie2": "#2B1840", "apagado": "#A596BD", "perigo": "#FF003C",
+    "destaque": "#FCEE0A",            // vira a cor de destaque do app enquanto o tema estiver em uso
+    "linha": "#80FCEE0A", "linhaFim": "",     // bordas; com linhaFim vira degradê (brilho de vidro)
+    "cartao": "#DB120A1E", "cartaoFim": "",   // cartões; com cartaoFim vira degradê do canto de cima ao de baixo
+    "lateral": "#EB080410", "lateralFim": ""  // barra lateral
+  },
+  "estilo": { "raioCartao": 6 },      // arredondamento dos cartões (8 a 32; 16 é o normal)
+  "wallpaper": "wallpaper.jpg",       // .jpg, .png ou .webp na raiz do zip (opcional, até 14 MB)
+  "wallpaperDesfoque": 12, "wallpaperEscurecer": 28
+}
+```
+
+**Publicar um tema:** gere o `.gmhtema` (selecione `tema.json` + a imagem → *Compactar para arquivo ZIP* → renomeie para `<id>.gmhtema`), coloque em `temas/`, pegue o SHA-256 (`Get-FileHash temas\<id>.gmhtema`) e adicione ao `catalogo.json`:
+
+```json
+{ "id": "seunome.meutema", "nome": "Meu tema", "versao": "1.0", "autor": "Seu nome", "descricao": "…", "icone": "🎨",
+  "oficial": false, "arquivo": "temas/seunome.meutema.gmhtema", "sha256": "…", "preview": "temas/previews/seunome.meutema.jpg" }
+```
+
+Sem `sha256` o app **recusa** o tema. O selo **✔ Oficial** só aparece para `"oficial": true` — como só você mexe neste repositório, só você decide. Temas de outras pessoas entram com `"oficial": false` (seção "Da comunidade"); confira o tema antes de aceitar um pull request. Usar **Desativar** no app devolve tema, cor de destaque e papel de parede de antes.
+
+> Dica de ícone: use emojis comuns (🎨 🌃 💧). Emojis muito novos podem aparecer como um quadradinho no Windows.
 
 ## Créditos
 
