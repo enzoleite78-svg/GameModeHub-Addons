@@ -1,29 +1,29 @@
 {
-    "formato":  1,
-    "temas":  [
-                  {
-                      "id":  "gmh.vidro-liquido",
-                      "nome":  "Liquid Glass",
-                      "versao":  "1.0",
-                      "autor":  "e_Almeida25",
-                      "descricao":  "Vidro translúcido inspirado no visual Liquid Glass da Apple: cartões que deixam o fundo colorido aparecer, bordas com brilho e cantos bem arredondados.",
-                      "icone":  "💧",
-                      "oficial":  true,
-                      "arquivo":  "temas/gmh.vidro-liquido.gmhtema",
-                      "sha256":  "236240011824b16b7194062c2f35f906db861098aed71bf61fe1744f5aaade2e",
-                      "preview":  "temas/previews/gmh.vidro-liquido.jpg"
-                  },
-                  {
-                      "id":  "gmh.cyberpunk",
-                      "nome":  "Cyberpunk",
-                      "versao":  "1.0",
-                      "autor":  "e_Almeida25",
-                      "descricao":  "Amarelo elétrico, ciano e magenta sobre roxo escuro, com cantos retos e uma cidade neon na chuva. Visual inspirado nas cores icônicas do Cyberpunk (arte feita do zero).",
-                      "icone":  "🌃",
-                      "oficial":  true,
-                      "arquivo":  "temas/gmh.cyberpunk.gmhtema",
-                      "sha256":  "c7d8c7e0660aa150626da2e04c0a3b0e880f4ec86fe03d7a55ec15cca8148cd1",
-                      "preview":  "temas/previews/gmh.cyberpunk.jpg"
-                  }
-              ]
+  "formato": 1,
+  "temas": [
+    {
+      "id": "gmh.cyberpunk",
+      "nome": "Cyberpunk",
+      "versao": "1.0",
+      "autor": "e_Almeida25",
+      "descricao": "Amarelo elétrico, ciano e magenta sobre roxo escuro, com cantos retos e uma cidade neon na chuva. Visual inspirado nas cores icônicas do Cyberpunk (arte feita do zero).",
+      "icone": "🌃",
+      "oficial": true,
+      "arquivo": "temas/gmh.cyberpunk.gmhtema",
+      "sha256": "c7d8c7e0660aa150626da2e04c0a3b0e880f4ec86fe03d7a55ec15cca8148cd1",
+      "preview": "temas/previews/gmh.cyberpunk.jpg"
+    },
+    {
+      "id": "gmh.vidro-liquido",
+      "nome": "Liquid Glass",
+      "versao": "1.0",
+      "autor": "e_Almeida25",
+      "descricao": "Vidro translúcido inspirado no visual Liquid Glass da Apple: cartões que deixam o fundo colorido aparecer, bordas com brilho e cantos bem arredondados.",
+      "icone": "💧",
+      "oficial": true,
+      "arquivo": "temas/gmh.vidro-liquido.gmhtema",
+      "sha256": "236240011824b16b7194062c2f35f906db861098aed71bf61fe1744f5aaade2e",
+      "preview": "temas/previews/gmh.vidro-liquido.jpg"
+    }
+  ]
 }
