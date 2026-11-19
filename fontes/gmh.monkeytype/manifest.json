@@ -1,0 +1,23 @@
+{
+  "formato": 1,
+  "id": "gmh.monkeytype",
+  "nome": "Monkeytype",
+  "versao": "1.0",
+  "autor": "e_Almeida25",
+  "autorLink": "https://github.com/enzoleite78-svg",
+  "icone": "⌨",
+  "descricao": "Exemplo de app portado: o teste de digitação Monkeytype dentro de uma aba do GameModeHub. Ótimo para aquecer antes de jogar.",
+  "appOriginal": {
+    "nome": "Monkeytype",
+    "autor": "Miodec e colaboradores",
+    "link": "https://github.com/monkeytypegame/monkeytype"
+  },
+  "pagina": {
+    "titulo": "Monkeytype",
+    "subtitulo": "Teste de digitação. Clique na página e comece a digitar.",
+    "web": "https://monkeytype.com",
+    "secoes": [
+      { "titulo": "", "itens": [ { "tipo": "link", "icone": "🌐", "texto": "Abrir no navegador", "url": "https://monkeytype.com" } ] }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "formato": 1,
+  "id": "gmh.atalhos",
+  "nome": "Atalhos de jogo",
+  "versao": "1.0",
+  "autor": "e_Almeida25",
+  "autorLink": "https://github.com/enzoleite78-svg",
+  "icone": "🚀",
+  "descricao": "Uma aba com botões para abrir as lojas de jogos, o Discord e controlar música e volume sem sair do GameModeHub.",
+  "pagina": {
+    "titulo": "Atalhos de jogo",
+    "subtitulo": "Na primeira vez que um botão abrir um programa, o GameModeHub pergunta se pode.",
+    "secoes": [
+      {
+        "titulo": "Lojas e launchers",
+        "itens": [
+          { "tipo": "botao", "icone": "🟦", "texto": "Steam", "acao": { "tipo": "abrir", "alvo": "steam://open/main" } },
+          { "tipo": "botao", "icone": "📺", "texto": "Steam Big Picture", "acao": { "tipo": "abrir", "alvo": "steam://open/bigpicture" } },
+          { "tipo": "botao", "icone": "⬛", "texto": "Epic Games", "acao": { "tipo": "abrir", "alvo": "com.epicgames.launcher://store" } },
+          { "tipo": "botao", "icone": "💬", "texto": "Discord", "acao": { "tipo": "abrir", "alvo": "discord://" } },
+          { "tipo": "botao", "icone": "🎵", "texto": "Spotify", "acao": { "tipo": "abrir", "alvo": "spotify:" } }
+        ]
+      },
+      {
+        "titulo": "Música e volume",
+        "itens": [
+          { "tipo": "botao", "icone": "⏮", "texto": "Anterior", "acao": { "tipo": "midia", "alvo": "anterior" } },
+          { "tipo": "botao", "icone": "⏯", "texto": "Tocar / pausar", "estilo": "primario", "acao": { "tipo": "midia", "alvo": "tocar" } },
+          { "tipo": "botao", "icone": "⏭", "texto": "Próxima", "acao": { "tipo": "midia", "alvo": "proxima" } },
+          { "tipo": "botao", "icone": "🔉", "texto": "Volume −10", "acao": { "tipo": "volume", "alvo": "-10" } },
+          { "tipo": "botao", "icone": "🔊", "texto": "Volume +10", "acao": { "tipo": "volume", "alvo": "+10" } },
+          { "tipo": "botao", "icone": "🔇", "texto": "Mudo", "acao": { "tipo": "volume", "alvo": "mudo" } }
+        ]
+      },
+      {
+        "titulo": "Windows",
+        "itens": [
+          { "tipo": "botao", "icone": "🎮", "texto": "Xbox Game Bar", "acao": { "tipo": "tecla", "alvo": "win+g" } },
+          { "tipo": "botao", "icone": "🖥", "texto": "Restaurar o desktop", "acao": { "tipo": "restaurar" } },
+          { "tipo": "texto", "estilo": "sub", "texto": "Dica: crie o seu próprio addon de atalhos com o GameModeHub Studio (em breve)." }
+        ]
+      }
+    ]
+  }
+}

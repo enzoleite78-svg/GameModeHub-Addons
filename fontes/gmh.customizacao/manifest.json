@@ -1,0 +1,28 @@
+{
+  "formato": 1,
+  "id": "gmh.customizacao",
+  "nome": "Customização",
+  "versao": "1.0",
+  "autor": "e_Almeida25",
+  "autorLink": "https://github.com/enzoleite78-svg",
+  "icone": "🎨",
+  "descricao": "Deixe o GameModeHub com a sua cara: 8 pacotes de temas prontos e um editor para montar o seu próprio tema.",
+  "pagina": {
+    "titulo": "Customização",
+    "subtitulo": "Escolha um tema pronto ou monte o seu. Os temas também aparecem em Aparência → Tema.",
+    "secoes": [
+      { "titulo": "Pacotes de temas", "itens": [ { "tipo": "temas" } ] },
+      { "titulo": "Monte o seu tema", "itens": [ { "tipo": "editorCores" } ] }
+    ]
+  },
+  "temas": [
+    { "id": "neon",     "nome": "Neon Roxo",  "fundo": "#0D0B1A", "superficie": "#17132B", "texto": "#ECE8FF", "destaque": "#B26BFF" },
+    { "id": "sakura",   "nome": "Sakura",     "fundo": "#1A1016", "superficie": "#261820", "texto": "#FBEAF1", "destaque": "#FF7EB6" },
+    { "id": "floresta", "nome": "Floresta",   "fundo": "#0C1410", "superficie": "#14201A", "texto": "#E4F2E8", "destaque": "#4ADE80" },
+    { "id": "por-do-sol","nome": "Pôr do sol","fundo": "#1A0F0C", "superficie": "#271813", "texto": "#FCEDE6", "destaque": "#FF8A3D" },
+    { "id": "oceano",   "nome": "Oceano",     "fundo": "#06141C", "superficie": "#0D1F2A", "texto": "#E3F3FA", "destaque": "#22D3EE" },
+    { "id": "vermelho", "nome": "Vermelho Gamer", "fundo": "#0E0A0B", "superficie": "#1B1214", "texto": "#F5E9EA", "destaque": "#FF3B4E" },
+    { "id": "cafe",     "nome": "Café",       "fundo": "#F4EEE7", "superficie": "#FFFBF6", "texto": "#2B1F17", "destaque": "#9A5B2E" },
+    { "id": "menta",    "nome": "Menta clara","fundo": "#EEF6F2", "superficie": "#FFFFFF", "texto": "#13241C", "destaque": "#0FA968" }
+  ]
+}
