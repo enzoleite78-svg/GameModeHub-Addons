@@ -1,0 +1,3 @@
+# Temas com selo Oficial (um id por linha). So o dono da loja edita este arquivo.
+gmh.vidro-liquido
+gmh.cyberpunk

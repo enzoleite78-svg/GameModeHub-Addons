@@ -159,6 +159,16 @@ temas/previews/<id>.jpg        ← prévia mostrada na loja (480×270)
 
 Sem `sha256` o app **recusa** o tema. O selo **✔ Oficial** só aparece para `"oficial": true` — como só você mexe neste repositório, só você decide. Temas de outras pessoas entram com `"oficial": false` (seção "Da comunidade"); confira o tema antes de aceitar um pull request. Usar **Desativar** no app devolve tema, cor de destaque e papel de parede de antes.
 
+### Postar um tema pelo app (para todo mundo)
+
+1. No GameModeHub: **Aparência → Temas+ → ✏ Criar tema**. Monte o tema, escreva o seu nome em "Seu nome (autor)" e clique em **📤 Postar na loja de temas**.
+2. O app cria o arquivo `<autor>.<nome>.gmhtema` em `Documentos\GameModeHub-Temas` (já com uma prévia) e abre a página de envio desta loja: `…/upload/main/temas`.
+3. A pessoa entra no GitHub (conta grátis), arrasta o arquivo, clica em **Propose changes** e depois em **Create pull request**.
+4. Uma automação (`.github/workflows/validar-temas.yml`) confere o arquivo na hora: só aceita `tema.json` + imagens, tamanhos limitados, cores válidas e que o pedido **só adicione** temas novos.
+5. **O dono da loja revisa** (abra o tema no app, se quiser: *Importar*) e clica em **Merge**. Em seguida a automação `atualizar-catalogo.yml` calcula o SHA-256 e atualiza `temas/catalogo.json` sozinha — o tema aparece na Loja de temas de todo mundo.
+
+**Selo ✔ Oficial:** só aparece para os ids listados em `temas/oficiais.txt` (só o dono edita). Todo tema postado por outras pessoas entra como "Da comunidade". Se um pedido mexer em `catalogo.json`, `oficiais.txt`, `.github/` ou em temas que já existem, a conferência fica vermelha — não aprove sem olhar.
+
 > Dica de ícone: use emojis comuns (🎨 🌃 💧). Emojis muito novos podem aparecer como um quadradinho no Windows.
 
 ## Créditos

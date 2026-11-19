@@ -1,0 +1,26 @@
+name: Validar temas
+
+# Roda em todo pedido (pull request) que mexe nos temas. So le: nao altera nada.
+on:
+  pull_request:
+    paths:
+      - "temas/**"
+      - ".github/**"
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Conferir os arquivos dos temas
+        run: python3 .github/scripts/temas.py --validar
+      - name: Conferir se mexe em arquivos protegidos
+        run: python3 .github/scripts/temas.py --revisar "origin/${{ github.base_ref }}"
+      - name: Pre-visualizar o catalogo (nao grava nada)
+        run: |
+          python3 .github/scripts/temas.py --gerar --saida /tmp/catalogo-previa.json --sem-previas
+          diff -u temas/catalogo.json /tmp/catalogo-previa.json || true
